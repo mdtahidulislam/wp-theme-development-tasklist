@@ -1,0 +1,74 @@
+development task list
+==========================================================
+1. create local server
+
+2. create database & install wordpress
+
+3. create theme file & active theme -- index.php, functions.php, style.css (required files)
+
+4. wp-content -> wp-config.php -> debug --> true
+
+5. load assets: 
+-- action hook: wp_enqueue_scripts
+-- wp_enqueue_style()
+-- wp_enqueue_script()
+-- get_template_directory_uri() - template directory
+-- get_stylesheet_uri() - style.css
+-- wp_head()
+-- wp_footer()
+
+6. load image
+-- set src: "<?php echo get_template_directory_uri(); ?>/assets/img/filename.ext"
+
+7. jquery console error handling: $ is not afunction
+-- use (strict mode): jQuery  $
+
+8. add different theme support
+   ### load text domain support
+   ### title-tag support
+   ### post thumbnail support
+   ### dynamic menu support: 
+-- register menu on sidebar : 
+   register_nav_menus()
+   https://developer.wordpress.org/reference/functions/register_nav_menu/
+-- display menu on theme : 
+   wp_nav_menu()
+   https://developer.wordpress.org/reference/functions/wp_nav_menu/
+-- add menu class
+
+9. dynamic slider: custom post type
+-- register CPT: 
+   - hook it with init action 
+   - register_post_type('name-appeared', $args)
+   - https://metabox.io/create-wordpress-custom-post-types/#method-1-create-custom-post-types-using-code
+   -https://developer.wordpress.org/reference/functions/register_post_type/
+-- add meta box
+   - https://wpmudev.com/blog/creating-meta-boxes/
+
+10. custom widget:
+-- register on sidebar
+-- display widget
+
+11. page templating
+-- page.php
+
+12. custom page template
+-- create template: Template Name comment
+-- template part: 
+   common folder
+   get_template_part()
+
+13. single page
+-- file name: single-{}.php 
+
+
+
+resource
+==========================================================
+1. underscores.me -- starter theme
+
+
+plugins
+==========================================================
+1. contact form 7, flamingo, contact from db 7(by arshid) for data store
+2. duplicate post
